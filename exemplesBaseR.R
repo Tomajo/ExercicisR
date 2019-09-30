@@ -72,5 +72,44 @@ square <- function(x){
 }
 square(33)
 
+##Matrius
+m <- matrix(x, nrow = 3, ncol = 3)
 
-##TODO: Falta acabar de fer ultima part de la primera pagina del r-cheat-sheet-3.pdf i seguir amb la segona.
+m[,2] #retorna la segona columna
+m[2] #retorna el segon element de la matriu
+m[2,] #retorna el la segona fila.
+
+##Llistes
+
+l <- list(x = 1:5, y = c('a', 'b'))
+
+str(l)  # veiem que hi ha dos grups de elements a la llista
+
+l[[1]] # extreu el primer grup d'elements
+l[[2]] #extreu el segon element
+l[2] # nou element amb el segon grup de la llista
+l$x # el element que s diu x de la llista
+
+l['y'] # el element y de la llista.
+
+##Data Frames
+
+df <- data.frame(x = 1:4, y = c('a', 'b', 'c','d'), z = 10:13)
+str(df)
+df$x # selecciono columna x
+str(df$x) # df$x es un vector
+
+df[[1]] # # selecciono primera  columna 
+str(df[[1]]) #es un vector
+
+df[,'x'] #selecciono  columna x
+str(df[,'x']) #retorna un vector
+
+df[df$x<4,] # Selecciono files  on X<4
+str(df[df$x<4,]) # retorna un data frame
+
+#TODO: 
+
+#nrow(df) Number of rows.
+#ncol(df) Number of columns.
+#dim(df) Number of columns and rows.
