@@ -108,8 +108,23 @@ str(df[,'x']) #retorna un vector
 df[df$x<4,] # Selecciono files  on X<4
 str(df[df$x<4,]) # retorna un data frame
 
-#TODO: 
+#Numero de files , columnes i dimensions. 
 
-#nrow(df) Number of rows.
-#ncol(df) Number of columns.
-#dim(df) Number of columns and rows.
+nrow(df) #Number of rows.
+ncol(df) #Number of columns.
+dim(df)  #Number of columns and rows.
+
+length(df) #dona la longitud en columnes
+length(df$x) #dona la longitud de la fila.
+
+df2<-cbind(df,df$x) #junto per columna
+dim(df2)
+df2
+
+df3<-rbind(df,df[2,]) #junto per fila.
+dim(df3)
+df3
+
+
+#rm del enviroment
+rm(list = ls())
